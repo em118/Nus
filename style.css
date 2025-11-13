@@ -1,0 +1,110 @@
+/* ---- Global Styles ---- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #1a0826;
+  color: #f5d67b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem 1.5rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffdc82;
+  text-shadow: 0 0 12px rgba(255, 215, 130, 0.3);
+}
+
+header p {
+  color: #d6b773;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* ---- Card Grid ---- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: 3rem auto;
+}
+
+.card {
+  position: relative;
+  background: #2a0d3a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: #f5d67b;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 2px solid rgba(255, 215, 130, 0.4);
+}
+
+.card h2 {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+/* ---- Hover 3D Effect ---- */
+.card:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(255, 204, 0, 0.4), 0 0 20px rgba(255, 223, 120, 0.2);
+}
+
+/* ---- Fade-in Animation ---- */
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* ---- Footer ---- */
+footer {
+  margin-top: auto;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #b79c5f;
+  border-top: 1px solid rgba(255, 215, 130, 0.2);
+}
+
+/* ---- Responsive Adjustments ---- */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .card img {
+    height: 200px;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+}
